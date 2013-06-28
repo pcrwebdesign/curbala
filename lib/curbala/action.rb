@@ -5,7 +5,7 @@ module Curbala
   class Action
     attr_accessor :args_hash, :config, :curl, :exception, :http_status, :message, :payload, :raw_response_string, :response, :success, :url
   
-    def initialize(service_url_segment, input_config, input_args_hash, logger, simulated_status=200, simulated_response="simulated response", timeout)
+    def initialize(service_url_segment, input_config, input_args_hash, logger, simulated_status=200, simulated_response="simulated response", timeout=nil)
       begin
         
         @payload, @args_hash, @config, @timeout = '', input_args_hash, input_config, (timeout || 10)
