@@ -5,10 +5,10 @@ module Curbala
   class Action
     attr_accessor :args_hash, :config, :curl, :exception, :http_status, :message, :payload, :raw_response_string, :response, :success, :url
   
-    def initialize(service_url_segment, input_config, input_args_hash, logger, simulated_status=200, simulated_response="simulated response", timeout=10)
+    def initialize(service_url_segment, input_config, input_args_hash, logger, simulated_status=200, simulated_response="simulated response", timeout)
       begin
         
-        @payload, @args_hash, @config, @timeout = '', input_args_hash, input_config, timeout
+        @payload, @args_hash, @config, @timeout = '', input_args_hash, input_config, (timeout || 10)
         @url = "#{@config['url']}#{service_url_segment}#{action_url_segment}"
         
         @config['simulate'] == true ?
