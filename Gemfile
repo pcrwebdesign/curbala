@@ -49,5 +49,10 @@ source :rubygems
 
 gemspec
 
+group :test, :development do
+	gem 'pry'
+	gem 'pry-debugger'
+end
+
 gem 'rspec', "~> 2.10.0"
 gem 'curb', '~> 0.8.1'
