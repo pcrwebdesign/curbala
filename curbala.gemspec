@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = "curbala"
-  s.version     = "0.0.3"
+  s.version     = "0.0.4"
   s.author      = "Frederick Fix"
-  s.email       = "rickfix80004@gmail.com"
-  s.homepage    = "http://github.com/rickfix/curbala"
-  s.summary     = "Curb client wrapper which encourages DRY implementations of, and provides logging for, external REST/API/Service calls."
+  s.email       = "pablo@pcr-webdesign.com"
+  s.homepage    = "http://github.com/pcrwebdesign/curbala"
+  s.summary     = "Curb client wrapper which encourages DRY implementations of, and provides logging for, external REST/API/Service calls. Fork from Frederick Fix"
   s.description = "Does you application invoke services that have different URLs in different Rails environments?  Would you like to log the application input to each service call, have fine grain control over API-specific data encoding and decoding, and log responses for each service call?  Are some of your service calls exhibiting a 'long line' code odor?  Do your API developers test their calls using curl commands?  This little ditty remedied these symptoms in our system and, most imporantly, expedited our rails app development and troubleshooting with internal and external API teams."
 
   s.files        = Dir["{lib,spec}/**/*", "[A-Z]*", "init.rb"] - ["Gemfile.lock"]
