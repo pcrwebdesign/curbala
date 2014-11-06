@@ -29,7 +29,7 @@ module Curbala
       logger ||= Logger.new(STDOUT)
     end
 
-    def.self environment
+    def self.environment
     	const_defined?('Rails') ?  Rails.env : (ENV['RAILS_ENV'] || ENV['ENVIRONMENT'])
     end
   end
